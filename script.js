@@ -58,9 +58,22 @@ let KeepMenuVisible=false
 function KeepMenu(){
     Main.elem.focus()
     KeepMenuVisible=!KeepMenuVisible
-    KeepMenuVisible
-    ? document.getElementById("keepMenu").style.display="inline-block"
-    : document.getElementById("keepMenu").style.display="none"
+    const elem = document.getElementById("keepMenu")
+    if(KeepMenuVisible){
+        elem.style.display = "inline-block"
+        let i = 0;
+        const opacityLoop = setInterval(() => {
+            elem.style.opacity = i/100
+            i+=10;
+            if(i == 100)clearInterval(opacityLoop);
+        }, 0.015);
+    }
+    else{
+        elem.style.opacity = 0
+        setTimeout(() => {
+            elem.style.display = "none"
+        }, 150);
+    }
 }
 
 function KeepCode(bool){

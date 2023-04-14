@@ -99,6 +99,7 @@ span.keepMenu{
     font-size:1.5vw;
     padding: 0.4%;
     text-align: center;
+    transition:opacity 0.15s;
 }
 button.KeepBtn{
     width:180px;
