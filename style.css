@@ -1,0 +1,224 @@
+@font-face {
+    font-family: "RictyDiminished";
+    src: url(RictyDiminished.ttf);
+}
+body{
+    overflow: hidden;
+    margin:2;padding: 2;
+    cursor:default;
+    user-select: none;
+    -ms-user-select: none;
+}
+img {
+    pointer-events: none;
+}
+
+div.MENUBAR{
+    font-size: 3vw;
+    height: 6%;
+    font-family:'Times New Roman', Times, serif;
+    padding-top: 0.2%;padding-bottom: 0.6%;
+}
+input.fontSizeSlider{
+    appearance: none;
+    height: 35%;
+    width: 7%;
+    border-radius: 10px;
+    vertical-align: middle;
+    outline: none;
+}
+input.fontSizeSlider::-webkit-slider-thumb{
+    appearance: none;
+    width: 20%;
+    height: 150%;
+    border-radius: 50%;
+}
+select.themeSelect,option.themeOption{
+    appearance: none;
+    outline: none;
+    width: 13.5%;
+    height: 80%;
+    font-size:18px;
+    margin-bottom: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+textarea.MainEditor{
+    width: 100%;height: 86.5%;
+    tab-size: 2;
+    font-size: 28px;
+    resize: none;
+    border-radius: 4px;
+    font-family:RictyDiminished;
+    font-weight: bold;
+    cursor: auto;
+    outline: none;
+}
+
+textarea.MainEditor::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+}
+textarea.MainEditor::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+}
+
+button.CtrlBtn{
+    width: 7%;height:5.8%;
+    font-size: 1.8vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    vertical-align: top;
+    border-radius: 2px;
+    border: none;
+}
+button.FileBtn{
+    width: 6.4%;
+}
+input.fileNameInput{
+    width: 20%;
+    height: 5%;
+    outline: none;
+    vertical-align: middle;
+    margin-top: 0.1%;
+    border: none;
+    font-size: 1.8vw;
+    padding-left: 8px;
+    padding-top: 4px;
+}
+input.fileNameInput::placeholder{
+    font-size: 1.5vw;
+}
+
+span.keepMenu{
+    position: absolute;
+    bottom: 7%;left:8%;
+    display: none;
+    width: 14%;height: 24%;
+    border-radius: 10px 10px 0px 0px;
+    font-size:1.5vw;
+    padding: 0.4%;
+    text-align: center;
+}
+button.KeepBtn{
+    width:180px;
+    height: 35px;
+    font-size: 24px;
+    margin: 3px;
+    border: none;
+    transition: 0.1s;
+}
+
+span.InfoArea{
+    display: inline-block;
+    height: 35px;width: 585px;
+    vertical-align: middle;
+    font-size: 22px;
+}
+span.infoTitle{
+    display: inline-block;
+    height: 35px;width: 70px;
+    padding-left: 3px;
+    vertical-align: middle;
+    text-align: center;font-size: 24px;
+}
+span.infoItem{
+    display: inline-block;
+    height: 35px;width: 245px;
+    font-weight: bold;
+}
+span.infoData{
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+button.ToolsBtn{
+    margin-left:35%;
+    width: 10%;
+    height: 90%;
+    margin-top: 5px;
+    vertical-align: top;
+    font-size: 20px;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.2s;
+}
+span.toolsMenu{
+    position: absolute;
+    bottom: 9%;right:28px;
+    display: none;
+    opacity: 0;
+    width: 19%;height: 81.8%;
+    font-size:20px;
+    padding: 5px;
+    text-align: center;
+    transition:opacity 0.15s;
+}
+
+span.toolsH{
+    font-size:30px
+}
+input.toolsInput{
+    width: 90%;
+    height: 6%;
+    border-radius: 5px;
+    border:none;
+    outline: none;
+    font-size: 25px;
+    text-align: center;
+    font-family:RictyDiminished;
+}
+input.toolsInput::placeholder{
+    text-align: center;
+}
+
+button.toolsMenu_Btn{
+    height: 5.5%;
+    width: 80%;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 20px;
+    transition: 0.1s;
+}
+
+button.toolsMenu_ReplaceBtn{
+    width: 40%;
+}
+
+input.toolsInput_Answer{
+    width:90%;
+    height: 8%;
+    border-radius: 1px;
+    outline: none;
+    border:none;
+    text-align: center;
+    font-size: 26px;
+}
+
+span.toolsBox_color{
+    display: inline-block;
+    width:90%;
+    height: 5.8%;
+    border-radius: 1px;
+    outline: none;
+    border:none;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    font-family:RictyDiminished;
+    padding-top: 10px;
+}
+
+span.tools_colorPaletteArea{
+    display: inline-block;
+    width:95%;
+    height: 7%;
+    text-align: left;
+}
+span.tools_colorPalette{
+    display: inline-block;
+    width:12.5%;
+    height: 100%;
+    cursor: pointer;
+}

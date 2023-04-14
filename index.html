@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Webiter by Riyansu</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="theme0.css" id="theme">
+        <script src="Richtml/textarea.js"></script>
+        <script src="script.js"></script>
+        <script src="evalCalc.js"></script>
+    </head>
+    <body oncontextmenu="event.preventDefault()">
+        <div class="MENUBAR">
+            &nbsp;Webiter&nbsp;
+            <span style="font-size:26px;vertical-align: bottom;">Ver.1.0.0　</span>
+            <span style="font-size:22px">by Riyansu </span>
+            <img src="Logo.png" style="height:60%;vertical-align:center">&nbsp;
+            <input type="range" min="16" max="80" value="28" step="4" class="fontSizeSlider" oninput="document.getElementById('MainEditor').style.fontSize=this.value" id="fontSizeSlider">
+            <select class="themeSelect" onchange="themeChange(this.value)">
+                <option class="themeOption" value="0">WindDark</option>
+                <option class="themeOption" value="1">HackerDark</option>
+                <option class="themeOption" value="2">NotepadLight</option>
+                <option class="themeOption" value="3">PopLight</option>
+                <option class="themeOption" value="4">FancyLight</option>
+                <option class="themeOption" value="5">NightDark</option>
+            </select>
+            <button class="ToolsBtn" onclick="ToolsMenu()" tabindex="-1">TOOLS</button>
+        </div>
+        <textarea class="MainEditor" id="MainEditor" wrap="off" spellcheck="false" oninput="MainInput()" onclick="MainClick()" maxlength="300000" onfocus="MainFocus = true" onblur="MainFocus = false"></textarea>
+        <span class="toolsMenu" id="toolsMenu">
+            <span class="toolsH">REPLACE</span><br>
+            <input type="text" placeholder="From" class="toolsInput" onchange="ReplaceFrom=this.value"><br>
+            <span style="display: inline-block;height: 0.5%;"></span><br>
+            <input type="text" placeholder="To" class="toolsInput" onchange="ReplaceTo=this.value"><br>
+            <span style="display: inline-block;height: 1%;"></span><br>
+            <button class="toolsMenu_Btn toolsMenu_ReplaceBtn" onclick="ReplaceCode(false)">ONE</button>
+            <button class="toolsMenu_Btn toolsMenu_ReplaceBtn" onclick="ReplaceCode(true)">ALL</button><br>
+            <span style="display: inline-block;height: 5%;"></span><br>
+            <span class="toolsH">CALCULATOR</span><br>
+            <input type="text" placeholder="Expression" class="toolsInput" onchange="Expression=this.value" id="Expression" onkeydown="if(event.keyCode==13)SolveExpression()"><br>
+            <span style="display: inline-block;height: 1%;"></span><br>
+            <button class="toolsMenu_Btn" onclick="SolveExpression()">SOLVE</button><br>
+            <span style="display: inline-block;height: 0.7%;"></span><br>
+            <input type="text" class="toolsInput_Answer" id="Answer" disabled><br>
+            <span style="display: inline-block;height: 5%;"></span><br>
+            <span class="toolsH">COLOR</span><br>
+            <input type="color" oninput="ColorViewer(this.value)" onchange="saveColorPalette(this.value)" id="ColorViewer"><br>
+            <span style="display: inline-block;height: 2%;"></span><br>
+            <span type="text" class="toolsBox_Color" id="ColorHEX" value="#000000" onclick="navigator.clipboard.writeText(this.innerText);">#000000</span><br>
+            <span style="display: inline-block;height: 1%;"></span><br>
+            <span type="text" class="toolsBox_Color" id="ColorRGB" value="rgb(0,0,0)" onclick="navigator.clipboard.writeText(this.innerText);">rgb(0,0,0)</span><br>
+            <span style="display: inline-block;height: 1.8%;"></span><br>
+            <span class="tools_colorPaletteArea">
+                <span class="tools_colorPalette" id="ColorPalette0" style="background-color: red;" onclick="selectColorPalette(0)"></span><span class="tools_colorPalette" id="ColorPalette1" style="background-color: orange;" onclick="selectColorPalette(1)"></span><span class="tools_colorPalette" id="ColorPalette2" style="background-color: yellow;" onclick="selectColorPalette(2)"></span><span class="tools_colorPalette" id="ColorPalette3" style="background-color: green" onclick="selectColorPalette(3)"></span><span class="tools_colorPalette" id="ColorPalette4" style="background-color:deepskyblue;" onclick="selectColorPalette(4)"></span><span class="tools_colorPalette" id="ColorPalette5" style="background-color: blue;" onclick="selectColorPalette(5)"></span><span class="tools_colorPalette" id="ColorPalette6" style="background-color: purple;" onclick="selectColorPalette(6)"></span><span class="tools_colorPalette" id="ColorPalette7" style="background-color: white;" onclick="selectColorPalette(7)"></span>
+            </span>
+        </span>
+        <span style="display: inline-block;height: 3px;"></span>
+        <div class="UNDERBAR">
+            <span style="margin-left: 3px;"></span>
+            <button type="button" class="CtrlBtn" style="width: 11%;" onclick="PreviewCode(false)" oncontextmenu="PreviewCode(true)">PREVIEW</button>
+            <button type="button" class="CtrlBtn" onclick="KeepMenu()">KEEP</button>
+            <span class="keepMenu" id="keepMenu">
+                <span style="font-weight: bold;text-decoration: underline;font-style: italic;font-size: 28px;">Keep Code</span><br>
+                ( Local Storage ) <br>
+                <button type="button" class="KeepBtn" onclick="KeepCode(true)">SAVE</button>
+                <button type="button" class="KeepBtn" onclick="KeepCode(false)" id="keepLoadBtn">LOAD</button>
+                <button type="button" class="KeepBtn" onclick="KeepCode(undefined)" id="keepDeleteBtn">DELETE</button>
+            </span>
+            <button type="button" class="CtrlBtn" onclick="CopyCode()">COPY</button>
+            <button type="button" class="CtrlBtn FileBtn" onclick="ReadCode()">READ</button><button type="button" class="CtrlBtn FileBtn" onclick="WriteCode()">WRITE</button><input type="text" class="fileNameInput" id="fileName" placeholder="FileName (HTML)" value="index.html">
+            <span class="InfoArea">
+                <span class="infoTitle">INFO</span>
+                <span class="infoItem" style="width: 220px;">
+                    C&nbsp;<span class="infoData"><span id="MainChar">0</span>/<span id="MainSelectChar">0</span></span>
+                </span>
+                <span class="infoItem">
+                    L&nbsp;<span class="infoData"><span id="MainLine">1</span>/<span id="MainSelectLine">1</span></span>
+                </span>
+            </span>
+        </div>
+    </body>
+</html>
