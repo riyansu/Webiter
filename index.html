@@ -11,10 +11,10 @@
     <body oncontextmenu="event.preventDefault()">
         <div class="MENUBAR">
             &nbsp;Webiter&nbsp;
-            <span style="font-size:26px;vertical-align: bottom;">Ver.1.1.0　</span>
-            <span style="font-size:22px">by Riyansu </span>
+            <span style="font-size:1.8vw;vertical-align: bottom;">Ver.1.1.4　</span>
+            <span style="font-size:1.4vw">by Riyansu </span>
             <img src="Logo.png" style="height:60%;vertical-align:center">&nbsp;
-            <input type="range" min="16" max="80" value="28" step="4" class="fontSizeSlider" oninput="document.getElementById('MainEditor').style.fontSize=this.value" id="fontSizeSlider">
+            <input type="range" min="16" max="80" value="28" step="4" class="fontSizeSlider" oninput="document.getElementById('MainEditor').style.fontSize=this.value;SB_ToolsMenu()" id="fontSizeSlider">
             <select class="themeSelect" onchange="themeChange(this.value)">
                 <option class="themeOption" value="0">WindDark</option>
                 <option class="themeOption" value="1">HackerDark</option>
@@ -39,7 +39,7 @@
             <input type="text" placeholder="Expression" class="toolsInput" onchange="Expression=this.value" id="Expression" onkeydown="if(event.keyCode==13)SolveExpression()"><br>
             <span style="display: inline-block;height: 1%;"></span><br>
             <button class="toolsMenu_Btn" onclick="SolveExpression()">SOLVE</button><br>
-            <span style="display: inline-block;height: 0.7%;"></span><br>
+            <span style="display: inline-block;height: 1%;"></span><br>
             <input type="text" class="toolsInput_Answer" id="Answer" disabled><br>
             <span style="display: inline-block;height: 5%;"></span><br>
             <span class="toolsH">COLOR</span><br>
@@ -53,13 +53,13 @@
                 <span class="tools_colorPalette" id="ColorPalette0" style="background-color: red;" onclick="selectColorPalette(0)"></span><span class="tools_colorPalette" id="ColorPalette1" style="background-color: orange;" onclick="selectColorPalette(1)"></span><span class="tools_colorPalette" id="ColorPalette2" style="background-color: yellow;" onclick="selectColorPalette(2)"></span><span class="tools_colorPalette" id="ColorPalette3" style="background-color: green" onclick="selectColorPalette(3)"></span><span class="tools_colorPalette" id="ColorPalette4" style="background-color:deepskyblue;" onclick="selectColorPalette(4)"></span><span class="tools_colorPalette" id="ColorPalette5" style="background-color: blue;" onclick="selectColorPalette(5)"></span><span class="tools_colorPalette" id="ColorPalette6" style="background-color: purple;" onclick="selectColorPalette(6)"></span><span class="tools_colorPalette" id="ColorPalette7" style="background-color: white;" onclick="selectColorPalette(7)"></span>
             </span>
         </span>
-        <span style="display: inline-block;height: 3px;"></span>
+        <span style="display: inline-block;height: 0.3%;"></span>
         <div class="UNDERBAR">
-            <span style="margin-left: 3px;"></span>
+            <span style="margin-left: 0.3%;"></span>
             <button type="button" class="CtrlBtn" style="width: 11%;" onclick="PreviewCode(false)" oncontextmenu="PreviewCode(true)">PREVIEW</button>
             <button type="button" class="CtrlBtn" onclick="KeepMenu()">KEEP</button>
             <span class="keepMenu" id="keepMenu">
-                <span style="font-weight: bold;text-decoration: underline;font-style: italic;font-size: 28px;">Keep Code</span><br>
+                <span style="font-weight: bold;text-decoration: underline;font-style: italic;font-size: 2vw;">Keep Code</span><br>
                 ( Local Storage ) <br>
                 <button type="button" class="KeepBtn" onclick="KeepCode(true)">SAVE</button>
                 <button type="button" class="KeepBtn" onclick="KeepCode(false)" id="keepLoadBtn">LOAD</button>
@@ -69,7 +69,7 @@
             <button type="button" class="CtrlBtn FileBtn" onclick="ReadCode()">READ</button><button type="button" class="CtrlBtn FileBtn" onclick="WriteCode()">WRITE</button><input type="text" class="fileNameInput" id="fileName" placeholder="FileName (HTML)" value="index.html">
             <span class="InfoArea">
                 <span class="infoTitle">INFO</span>
-                <span class="infoItem" style="width: 220px;">
+                <span class="infoItem" style="width: 42%;">
                     C&nbsp;<span class="infoData"><span id="MainChar">0</span>/<span id="MainSelectChar">0</span></span>
                 </span>
                 <span class="infoItem">

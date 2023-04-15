@@ -1,0 +1,155 @@
+body{
+    background-color:rgb(255, 255, 0);
+}
+
+div.MENUBAR{
+    background-color:rgb(0, 7, 52);
+    color:rgb(255, 255, 0);
+}
+input.fontSizeSlider{
+    background-color: #070c46;
+    border: solid 1px #d3ecff;
+}
+input.fontSizeSlider::-webkit-slider-thumb{
+    background: #000000;
+    border: yellow 1px solid;
+}
+select.themeSelect,option.themeOption{
+    background-color: rgb(0, 53, 100);
+    color:rgb(255, 255, 100);
+}
+
+textarea.MainEditor{
+    background-color: #070c46;
+    color: rgb(250, 255, 110);
+    border:transparent 2px solid
+}
+textarea.MainEditor:focus{
+    border:rgb(225, 255, 0) 2px solid
+}
+
+textarea.MainEditor::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+textarea.MainEditor::-webkit-scrollbar-track {
+    background-color: rgba(245, 255, 255, 0.15);
+}
+textarea.MainEditor::selection {
+    background-color: rgba(242, 255, 2, 0.6);
+}
+
+div.UNDERBAR{
+    background-color:rgb(255, 255, 0);
+}
+button.CtrlBtn{
+    border: rgb(255, 255, 255) 1 solid;
+    background-color: rgb(0, 57, 113);
+    color:white;
+}
+button.CtrlBtn:hover{
+    background-color:rgba(0, 57, 113,0.9);
+}
+button.CtrlBtn:active{
+    background-color:rgb(21, 58, 72);
+}
+button.FileBtn{
+    border-left:1px rgb(31, 37, 46) solid;
+    border-right:1px rgb(31, 37, 46) solid
+}
+input.fileNameInput{
+    background-color: rgb(3, 0, 97);
+    color:white;
+}
+input.fileNameInput::placeholder{
+    color:rgba(255,255,255,0.3);
+}
+
+span.keepMenu{
+    background-color: rgb(0, 0, 0);
+    box-shadow: 2px 2px rgba(50, 50, 50, 0.3);
+    color: white;
+}
+button.KeepBtn{
+    background-color: rgb(255, 251, 0);
+    color:rgb(29, 0, 88);
+}
+button.KeepBtn:hover{
+    background-color: rgba(255, 225, 0,0.8);
+}
+button.KeepBtn:active{
+    background-color: rgb(114, 116, 0);
+}
+button.KeepBtn:disabled{
+    background-color: rgb(17, 0, 53);
+    color:gray
+}
+
+span.InfoArea{
+    background-color: rgb(24, 0, 121);
+    color:white;
+}
+span.infoTitle{
+    background-color: rgba(255,255,255,0.1);
+    color:white;
+}
+
+button.ToolsBtn{
+    background-color: rgba(0, 0, 0, 0.1);
+    color:rgb(255, 240, 160);
+    border:rgba(255, 255, 255, 0.8) 1px solid;
+}
+button.ToolsBtn:hover{
+    background-color: rgba(90, 105, 100, 0.3);
+}
+button.ToolsBtn:active{
+    background-color: rgba(40, 40, 50, 0.2);
+}
+
+span.toolsMenu{
+    background-color: rgba(0, 45, 90, 0.95);
+}
+
+span.toolsH{
+    color:rgb(250, 255, 120)
+}
+input.toolsInput{
+    color:rgb(250, 255, 205);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+input.toolsInput:disabled{
+    background-color: rgba(235, 255, 245, 0.2);
+}
+input.toolsInput::placeholder{
+    color:rgba(235,255,245,0.3);
+}
+input.toolsInput:focus::placeholder{
+    color:rgba(255,255,255,0.5);
+    cursor: none;
+}
+
+button.toolsMenu_Btn{
+    background-color: rgba(95, 95, 95, 0.5);
+    color: rgb(250, 255, 85);
+}
+button.toolsMenu_Btn:hover{
+    background-color: rgba(250, 255, 180, 0.55);
+}
+button.toolsMenu_Btn:active{
+    background-color: rgba(225, 230, 160, 0.55);
+}
+
+input.toolsInput_Answer{
+    color:rgb(240, 255, 80)
+}
+span.toolsBox_Color{
+    transition: 0.1s;
+    color:rgb(240, 255, 140);
+    background-color: rgba(230,255,230,0.2);
+}
+span.toolsBox_Color:active{
+    background-color: rgba(213, 255, 247, 0.24);
+}
+
+span.tools_colorPaletteArea{
+    border: black 1px dotted;
+}

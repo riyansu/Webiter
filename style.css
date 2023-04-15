@@ -4,7 +4,7 @@
 }
 body{
     overflow: hidden;
-    margin:2;padding: 2;
+    margin:0.1%;padding: 0.1%;
     cursor:default;
     user-select: none;
     -ms-user-select: none;
@@ -14,7 +14,7 @@ img {
 }
 
 div.MENUBAR{
-    font-size: 3vw;
+    font-size: 2.6vw;
     height: 6%;
     font-family:'Times New Roman', Times, serif;
     padding-top: 0.2%;padding-bottom: 0.6%;
@@ -22,7 +22,7 @@ div.MENUBAR{
 input.fontSizeSlider{
     appearance: none;
     height: 35%;
-    width: 7%;
+    width: 8%;
     border-radius: 10px;
     vertical-align: middle;
     outline: none;
@@ -38,8 +38,8 @@ select.themeSelect,option.themeOption{
     outline: none;
     width: 13.5%;
     height: 80%;
-    font-size:18px;
-    margin-bottom: 5px;
+    font-size:1.3vw;
+    /* margin-bottom: 0.%; */
     text-align: center;
     vertical-align: middle;
 }
@@ -77,14 +77,14 @@ button.FileBtn{
 }
 input.fileNameInput{
     width: 20%;
-    height: 5%;
+    height: 5.7%;
     outline: none;
     vertical-align: middle;
-    margin-top: 0.1%;
+    margin-top: 0.02%;
     border: none;
     font-size: 1.8vw;
-    padding-left: 8px;
-    padding-top: 4px;
+    padding-left: 0.8%;
+    padding-top: 0.2%;
 }
 input.fileNameInput::placeholder{
     font-size: 1.5vw;
@@ -102,62 +102,60 @@ span.keepMenu{
     transition:opacity 0.15s;
 }
 button.KeepBtn{
-    width:180px;
-    height: 35px;
-    font-size: 24px;
-    margin: 3px;
+    width:80%;
+    height: 16%;
+    font-size: 1.6vw;
+    margin: 1.5%;
     border: none;
     transition: 0.1s;
 }
 
 span.InfoArea{
     display: inline-block;
-    height: 35px;width: 585px;
+    height: 5%;width: 40%;
     vertical-align: middle;
-    font-size: 22px;
+    font-size: 1.5vw;
 }
 span.infoTitle{
     display: inline-block;
-    height: 35px;width: 70px;
-    padding-left: 3px;
+    height: 100%;width: 12%;
+    padding-left: 0.1%;
     vertical-align: middle;
-    text-align: center;font-size: 24px;
+    text-align: center;font-size: 1.7vw;
 }
 span.infoItem{
     display: inline-block;
-    height: 35px;width: 245px;
+    height: 99%;width: 35%;
     font-weight: bold;
 }
 span.infoData{
-    font-size: 20px;
+    font-size: 1.4vw;
     font-weight: lighter;
 }
 
 button.ToolsBtn{
-    margin-left:35%;
+    margin-left:34%;
     width: 10%;
     height: 90%;
-    margin-top: 5px;
+    margin-top: 0.2%;
     vertical-align: top;
-    font-size: 20px;
+    font-size: 1.7vw;
     border-radius: 10px;
     outline: none;
     transition: 0.2s;
 }
 span.toolsMenu{
     position: absolute;
-    bottom: 9%;right:28px;
     display: none;
     opacity: 0;
-    width: 19%;height: 81.8%;
-    font-size:20px;
-    padding: 5px;
+    width: 19%;
+    padding: 0.1%;
     text-align: center;
     transition:opacity 0.15s;
 }
 
 span.toolsH{
-    font-size:30px
+    font-size:2vw
 }
 input.toolsInput{
     width: 90%;
@@ -165,7 +163,7 @@ input.toolsInput{
     border-radius: 5px;
     border:none;
     outline: none;
-    font-size: 25px;
+    font-size: 1.8vw;
     text-align: center;
     font-family:RictyDiminished;
 }
@@ -179,7 +177,7 @@ button.toolsMenu_Btn{
     outline: none;
     border: none;
     border-radius: 2px;
-    font-size: 20px;
+    font-size: 1.5vw;
     transition: 0.1s;
 }
 
@@ -189,12 +187,12 @@ button.toolsMenu_ReplaceBtn{
 
 input.toolsInput_Answer{
     width:90%;
-    height: 8%;
+    height: 7.5%;
     border-radius: 1px;
     outline: none;
     border:none;
     text-align: center;
-    font-size: 26px;
+    font-size: 2vw;
 }
 
 span.toolsBox_color{
@@ -205,10 +203,10 @@ span.toolsBox_color{
     outline: none;
     border:none;
     text-align: center;
-    font-size: 30px;
+    font-size: 2vw;
     cursor: pointer;
     font-family:RictyDiminished;
-    padding-top: 10px;
+    padding-top: 3%;
 }
 
 span.tools_colorPaletteArea{

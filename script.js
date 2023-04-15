@@ -28,6 +28,7 @@ function FontSizeChange(){
     if(slider.value == 80)slider.value = 16;
     else slider.value = Number(slider.value)+4;
     Main.elem.style.fontSize=slider.value
+    SB_ToolsMenu()
 }
 
 function PreviewCode(newWin)
@@ -83,7 +84,7 @@ function KeepCode(bool){
         document.getElementById("keepLoadBtn").disabled=false
         document.getElementById("keepDeleteBtn").disabled=false
     }
-    else if(bool==false){Main.value = localStorage.getItem('Code')}
+    else if(bool==false){Main.value = localStorage.getItem('Code');ReloadInfo()}
     else{
         localStorage.removeItem('Code');
         document.getElementById("keepLoadBtn").disabled=true
@@ -114,6 +115,7 @@ function ReadCode(){
         document.getElementById('MainEditor').value = content
         document.getElementById('fileName').value = file.name
         Main.elem.focus()
+        ReloadInfo()
     })();
 }
 function WriteCode(){
@@ -507,12 +509,15 @@ function ReloadInfo(){
         const nse = Main.value.substring(0,Main.caretEnd).match(/\n/g)
         const ns = [(nss==null)?1:nss.length+1,(nse==null)?1:nse.length+1]
         document.getElementById('MainSelectLine').innerHTML= (ns[0]==ns[1])? ns[0]:"<span title='"+(ns[1]-ns[0])+"'>"+ns[0]+":"+ns[1]+"</span>"
-        toolsMenu.style.right = Main.YScrollBar?"28px":"8px"
-        toolsMenu.style.bottom = Main.XScrollBar?"9.1%":"6.8%"
-        toolsMenu.style.height = Main.XScrollBar?"81.7%":"84%"
+        SB_ToolsMenu()
         // if(Main.elem.scrollHeight > Main.elem.clientHeight)document.getElementById("toolsMenu").style.right = "28px";
         // else document.getElementById("toolsMenu").style.right = "8px";
     }, 0);
+}
+function SB_ToolsMenu(){
+    toolsMenu.style.right = Main.YScrollBar?"1.8%":"0.5%"
+    toolsMenu.style.bottom = Main.XScrollBar?"9.1%":"6.8%"
+    toolsMenu.style.height = Main.XScrollBar?"81.7%":"84.8%"
 }
 
 let ToolsMenuVisible = false
@@ -541,6 +546,7 @@ let ReplaceFrom = ""
 let ReplaceTo = ""
 function ReplaceCode(bool){
     Main.replace(ReplaceFrom,ReplaceTo,bool)
+    ReloadInfo()
 }
 
 function calculate(expression) {
