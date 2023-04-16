@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>Webitor Document</title>
+        <meta charset='utf-8'>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body style="color:white;background-color: rgb(10, 55, 80);user-select: none;">
+        <div style="font-size:4.5vw;text-align:center;font-weight: bold;background-color: rgb(0, 0, 0);height: 12%;font-style: italic;height: 12%;">
+            Webiter
+            <span style="font-style:normal;font-size: 1.5vw;padding-left: 5%;font-weight: lighter;">Ver.1.2.0</span>
+        </div>
+        <div style="font-size:30px;text-align:center;font-weight: bold;background-color: rgb(35, 35, 45);height: 6%;border-bottom: rgba(255,255,255,0.2) 1px solid;">
+            <button class="menuBtn menuBtn-default" id="menu0" onclick="selectMenu(0)">Introduction</button>
+            <button class="menuBtn menuBtn-default" id="menu1" onclick="selectMenu(1)">Help</button>
+            <button class="menuBtn menuBtn-default" id="menu2" onclick="selectMenu(2)">ReleaseNotes</button>
+        </div>
+        <div style="background-color: rgb(10, 50, 70);">
+            <div id="page0" style="display:none" class="Main Main-default">
+                <span class="H">Webiterとは？</span><br>
+                Webiterは、Web上でWebサイトが作れる、シンプルなテキストエディタです。<br>
+                VSCodeやAtom,SublimeTextなどなど、たくさんの素晴らしいテキストエディタが<br>
+                公開されていますが、何か理由があってそれらを使用できないとき、<br>
+                Web上でサクッとコーディングができるように作成しました。<br>
+                また、最近、AIでコードの自動生成などできるようになっていますから、<br>
+                HTML限定ですがコードの動作確認として使用することもできるので便利だと思います。<br>
+                <br>
+                <span class="H">Webiterの特徴</span><br>
+                ・ Web上で動作するので、どこでも使用可能です。<br>
+                ・ 流行りのテキストエディタのような機能(ショートカットキー)を搭載しています。<br>
+                ・ ツールエリアに、いくつかの機能を搭載しています。<br>
+                ・ 指定文字の置換(全て / 一つずつ)<br>
+                ・ 計算機(一般数学的な計算式に対応)<br>
+                ・ カラーピッカー(カラーパレット機能・カラーコード機能搭載)<br>
+                ・ シンプルで分かりやすいレイアウトになっていると思います。<br>
+                ・ 文字数と選択されている文字数、行数とキャレットの行番号を表示しています。<br>
+                ・ コードのプレビュー機能を搭載しています。<br>
+                ・ コードの一時保存/ロードができる「Keep」機能を搭載しています。<br>
+                ・ 既存のファイルを読み込んだり、コードをHTMLファイルとして書き出すことができます。<br>
+                ・ エディタの文字サイズやカラーテーマを変更可能です。<br>
+                ・ OSごとにショートカットキーが最適化されます。<br>
+                ・ VueやReact、BootstrapやTailwindCSSなどを使用していないため、軽快に動作します。<br>
+                <br>
+                <span class="H">制作者</span><br>
+                <span style="font-size: 30px;vertical-align: middle;"><img src="Logo.png" style="width: 2.8%;vertical-align: middle;">&nbsp;りやんす</span> <a href="https://twitter.com/riyansu255" class="mainLink" target="_blank">Twitter</a> <a href="https://youtube.com/@riyansu255" class="mainLink" target="_blank">YouTube</a><br>
+            </div>
+            <div id="page1" style="display:none" class="Main Main-bar">
+                <span class="H">1.ダウンロード</span><br>
+                下のリンクをクリックすることでダウンロードできます。<br>
+                <span style="font-size:18px;color:gainsboro">
+                    &nbsp; ※zipファイルにすべてのRichtmlライブラリが含まれています。<br>
+                    &nbsp; 　解凍して、Richtmlフォルダをそのままで使用することをおすすめします。<br>
+                    &nbsp; 　(中身を単体で出すとどのファイルか分かりづらくなる可能性があります)<br>
+                </span>
+                　<a download="Richtml" href="../RichtmlBeta.zip" class="mainLink">Richtml Ver.1.0.0</a><br>
+                <br>
+                <span class="H">2.HTMLから参照</span><br>
+                Richtmlフォルダの中の使いたいファイルを参照してください。<br>
+                <span class="codeSample">
+                    &lt;<span style="color: orangered;">script</span> <span style="color:violet">src</span>=<span style="color:mediumseagreen">"Richtml/○○○○.js"</span>&gt;&lt;/<span style="color:orangered">script</span>&gt;
+                </span>
+                <span style="font-size:18px;color:gainsboro">
+                    &nbsp; ※基本的にはファイル名は「小文字の要素名.js」となっています。
+                </span><br>
+                <br><br>
+                それぞれの詳細はReferenceタブでご覧ください。<br>
+                また、Exampleタブでは具体的な使用例(作成したツール)を掲載する予定です。
+            </div>
+            <div id="page2" style="display:none" class="Main Main-bar">
+                <span class="H">2023/04/14 : Ver.1.0.0公開</span><br>
+                ・Webiterを公開しました。<br><br>
+                <span class="H">2023/04/14 : Ver.1.1.0公開</span><br>
+                ・簡易的なアニメーションを追加しました。<br><br>
+                <span class="H">2023/04/15 : Ver.1.2.0公開</span><br>
+                ・簡易的なレスポンシブデザインを実装しました。<br>
+                ・「NightDark」テーマが反映されない問題を修正しました。<br>
+                ・「NotePad」テーマで境界線がわかりにくい問題を修正しました。<br>
+                ・ツールメニューでスクロールバーが隠れる問題を修正しました。<br>
+                ・ボタンと入力フィールドのずれを修正しました。<br>
+                ・ファイルの読み込み、Keepからの読み込み時、正常に文字数や行数が表示されない問題を修正しました。<br><br>
+                <span class="H">2023/04/16 : Ver.1.3.0公開</span><br>
+                ・このドキュメントを作成、Webiterから開けるようにしました。<br>
+                ・内部のファイル管理を最適化しました。<br>
+                ・デザインを見やすく一新し、メニューバーの制作者表示を廃止しました。<br><br>
+            </div>
+        </div>
+    </body>
+</html>

@@ -19,7 +19,7 @@ window.onload=()=>{
 
 function themeChange(val){
     Main.elem.focus()
-    document.getElementById('theme').href=`theme${val}.css`
+    document.getElementById('theme').href=`Theme/theme${val}.css`
 }
 
 function FontSizeChange(){

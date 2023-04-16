@@ -1,0 +1,84 @@
+button.menuBtn{
+    font-size: 1.6vw;
+    width:25%;
+    margin-top: 0.1%;
+    height: 90%;
+    vertical-align: top;
+    transition: 0.2s;
+    outline: none;
+    margin-right: -0.6%;
+}
+
+button.menuBtn-default{
+    color:white;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+button.menuBtn-default:hover{
+    background-color: rgba(255,255,255,0.25);
+    transition: 0.04s;
+}
+
+button.menuBtn-selected{
+    color:white;
+    background-color: rgba(255,255,255,0.5);
+    border:none;
+}
+
+div.Main{
+    /* background-color: white; */
+    color:white;
+    padding-top: 1%;
+    padding-bottom: 3%;
+    font-size: 24px;
+}
+div.Main-default{
+    padding-left: 5%;
+}
+span.H{
+    font-size:32px;text-decoration: underline 1px;
+    text-underline-offset: 7px;
+}
+
+a.mainLink{
+    color:deepskyblue;
+    text-decoration: none;
+}
+a.mainLink:hover{
+    color:dodgerblue;
+    text-decoration: underline 2px;
+}
+
+div.Main-bar{
+    padding-left: 5%;
+    height: 100%;
+}
+
+input.TS-errorCodeInput{
+    width: 60%;
+    height: 5%;
+    border-radius: 30px;
+    text-align: center;
+    background-color: rgb(28, 28, 53);
+    outline: none;
+    border: rgb(61, 61, 117) 1px solid;
+    font-size: 26px;
+    color:white;
+    text-transform: uppercase;
+}
+input.TS-errorCodeInput::placeholder{
+    font-size: 25px;
+}
+
+span.codeSample{
+    display: block;
+    width: 50%;
+    height: 8%;
+    background-color: rgb(3, 0, 55);
+    color:white;
+    text-align: center;
+    padding-top: 2%;
+    font-family: monospace;
+    user-select:text;
+}

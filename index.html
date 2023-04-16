@@ -1,19 +1,24 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Webiter by Riyansu</title>
+        <title>Webiter</title>
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="theme0.css" id="theme">
+        <link rel="stylesheet" href="Theme/theme0.css" id="theme">
         <script src="Richtml/textarea.js"></script>
         <script src="script.js"></script>
         <script src="evalCalc.js"></script>
+        <!-- <meta name=”viewport” content=”width=device-width, initial-scale=1”> -->
     </head>
     <body oncontextmenu="event.preventDefault()">
         <div class="MENUBAR">
-            &nbsp;Webiter&nbsp;
-            <span style="font-size:1.8vw;vertical-align: bottom;">Ver.1.2.0　</span>
-            <span style="font-size:1.4vw">by Riyansu </span>
-            <img src="Logo.png" style="height:60%;vertical-align:center">&nbsp;
+            &nbsp;<span style="vertical-align: bottom;">Webiter</span>&nbsp;
+            <span style="font-size:1.8vw;vertical-align: bottom;">Ver.1.2.0　</span>&nbsp;
+            <!-- <span style="font-size:1.4vw">by Riyansu </span> -->
+            <!-- <img src="Logo.png" style="height:60%;vertical-align:middle">&nbsp; -->
+            <button type="button" class="docsBtn" onclick="window.open('Document/index.html')">
+                <img src="DocsBtn.png" style="height: 100%;vertical-align: middle;">
+            </button>&nbsp;
+            <span style="display: inline-block;width: 2%;"> </span>
             <input type="range" min="16" max="80" value="28" step="4" class="fontSizeSlider" oninput="document.getElementById('MainEditor').style.fontSize=this.value;SB_ToolsMenu()" id="fontSizeSlider">
             <select class="themeSelect" onchange="themeChange(this.value)">
                 <option class="themeOption" value="0">WindDark</option>
