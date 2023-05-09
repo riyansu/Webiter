@@ -1,6 +1,9 @@
-# Webtiter
+# Webiter
 
-Webiterは、Web上でWebサイトが作れる、シンプルなテキストエディタです。  
+Webiterは、Web上でWebサイトが作れる、シンプルなテキストエディタです。
+OnlineWebEditorLITEの機能を大幅に強化し、IE以外のブラウザ専用に改造した感じです。  
+制作した目的は、OnlineWebEditorLITEと同じですが、  
+IEを使う機会がなくなったので、最新ブラウザ対応版を作った感じです。  
 
 # Features
 
