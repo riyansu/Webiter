@@ -76,20 +76,23 @@ class textarea{
 
 
     //EX Function
-    replace(from,to,all){
+    replace(from,to,all,ls=false,regex=false){
         if(all){
-            const re = new RegExp(from,"g")
+            const re = new RegExp((regex)?from:from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),(ls)?"gi":"g")
             this.elem.value = this.elem.value.replace(re,to)
         }
-        else this.elem.value = this.elem.value.replace(from,to)
-    }
-    replaceSelection(from,to,all){
-        if(all){
-            const re = new RegExp(from,"g")
-            this.elem.value.substring(0,this.elem.selectionStart)+this.elem.value.substring(this.elem.selectionStart,this.elem.selectionEnd).replace(re,to)+this.elem.value.substring(this.elem.selectionEnd,this.elem.value.length)
+        else{
+            const re = new RegExp((regex)?from:from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),(ls)?"i":"")
+            this.elem.value = this.elem.value.replace(re,to)
         }
-        else this.elem.value = this.elem.value.substring(0,this.elem.selectionStart)+this.elem.value.substring(this.elem.selectionStart,this.elem.selectionEnd).replace(from,to)+this.elem.value.substring(this.elem.selectionEnd,this.elem.value.length)
     }
+    // replaceSelection(from,to,all){
+    //     if(all){
+    //         const re = new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),"g")
+    //         this.elem.value.substring(0,this.elem.selectionStart)+this.elem.value.substring(this.elem.selectionStart,this.elem.selectionEnd).replace(re,to)+this.elem.value.substring(this.elem.selectionEnd,this.elem.value.length)
+    //     }
+    //     else this.elem.value = this.elem.value.substring(0,this.elem.selectionStart)+this.elem.value.substring(this.elem.selectionStart,this.elem.selectionEnd).replace(from,to)+this.elem.value.substring(this.elem.selectionEnd,this.elem.value.length)
+    // }
 
     find(str){
         const searchStr = this.elem.value.search(str)
