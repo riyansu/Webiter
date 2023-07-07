@@ -21,7 +21,7 @@ div.MENUBAR{
     vertical-align: middle;
 }
 button.docsBtn{
-    height: 80%;vertical-align: middle;background-color: transparent;outline: none;border: none;
+    height: 70%;vertical-align: middle;background-color: transparent;outline: none;border: none;
     cursor:pointer;border-radius: 50%;
     padding:0
 }
@@ -155,7 +155,7 @@ span.toolsMenu{
     position: absolute;
     display: none;
     opacity: 0;
-    width: 19%;
+    width: 22%;
     padding: 0.1%;
     text-align: center;
     transition:opacity 0.15s;
@@ -165,17 +165,34 @@ span.toolsH{
     font-size:2vw
 }
 input.toolsInput{
-    width: 90%;
+    width: 92%;
     height: 6%;
     border-radius: 5px;
     border:none;
     outline: none;
-    font-size: 1.8vw;
+    font-size: 1.7vw;
     text-align: center;
     font-family:RictyDiminished;
 }
 input.toolsInput::placeholder{
     text-align: center;
+}
+button.tools_findBtn{
+    vertical-align: top;
+    text-align: center;
+    height: 4%;
+    width: 45%;
+    font-size: 20px;
+    background-color:rgba(255,255,255,0.25);
+    color:rgb(200, 200, 200);
+    outline: none;
+    border:none;
+    margin-left: 0.3%;
+    margin-right: 0.3%;
+    transition: 0.2s;
+}
+button.tools_findBtn:hover{
+    background-color:rgba(255,255,255,0.3);
 }
 
 button.toolsMenu_Btn{
@@ -194,7 +211,7 @@ button.toolsMenu_ReplaceBtn{
 
 input.toolsInput_Answer{
     width:90%;
-    height: 7.5%;
+    height: 6.5%;
     border-radius: 1px;
     outline: none;
     border:none;
@@ -205,7 +222,7 @@ input.toolsInput_Answer{
 span.toolsBox_color{
     display: inline-block;
     width:90%;
-    height: 5.8%;
+    height: 5.5%;
     border-radius: 1px;
     outline: none;
     border:none;
@@ -219,7 +236,7 @@ span.toolsBox_color{
 span.tools_colorPaletteArea{
     display: inline-block;
     width:95%;
-    height: 7%;
+    height: 6%;
     text-align: left;
 }
 span.tools_colorPalette{

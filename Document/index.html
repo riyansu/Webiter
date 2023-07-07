@@ -8,7 +8,7 @@
     <body style="color:white;background-color: rgb(10, 55, 80);user-select: none;">
         <div style="font-size:4.5vw;text-align:center;font-weight: bold;background-color: rgb(0, 0, 0);height: 12%;font-style: italic;height: 12%;">
             Webiter
-            <span style="font-style:normal;font-size: 1.5vw;padding-left: 5%;font-weight: lighter;">Ver.1.2.0</span>
+            <span style="font-style:normal;font-size: 1.5vw;padding-left: 5%;font-weight: lighter;">Ver.1.4.0</span>
         </div>
         <div style="font-size:30px;text-align:center;font-weight: bold;background-color: rgb(35, 35, 45);height: 6%;border-bottom: rgba(255,255,255,0.2) 1px solid;">
             <button class="menuBtn menuBtn-default" id="menu0" onclick="selectMenu(0)">Introduction</button>
@@ -22,24 +22,31 @@
                 VSCodeやAtom,SublimeTextなどなど、たくさんの素晴らしいテキストエディタが<br>
                 公開されていますが、何か理由があってそれらを使用できないとき、<br>
                 Web上でサクッとコーディングができるように作成しました。<br>
-                また、最近、AIでコードの自動生成などできるようになっていますから、<br>
-                HTML限定ですがコードの動作確認として使用することもできるので便利だと思います。<br>
+                また、最近はAIでコードの自動生成などできるようになっていますから、<br>
+                HTML限定ですがコードの動作確認として使用すると便利だと思います。<br>
+                フレームワークやライブラリを一切使用していないので、<br>
+                InternetExplorer以外のブラウザを使用していれば、<br>
+                おそらく動作すると思いますし、かなり軽快に動作するはずです。<br>
+                たくさん使ってくれたら嬉しいです！よろしくお願いします！<br>
+                ※シンタックスハイライトは実装してません。<br>
+                　気が向いたらもしかしたら実装するかもしれませんが...<br>
                 <br>
                 <span class="H">Webiterの特徴</span><br>
-                ・ Web上で動作するので、どこでも使用可能です。<br>
-                ・ 流行りのテキストエディタのような機能(ショートカットキー)を搭載しています。<br>
-                ・ ツールエリアに、いくつかの機能を搭載しています。<br>
-                ・ 指定文字の置換(全て / 一つずつ)<br>
-                ・ 計算機(一般数学的な計算式に対応)<br>
-                ・ カラーピッカー(カラーパレット機能・カラーコード機能搭載)<br>
-                ・ シンプルで分かりやすいレイアウトになっていると思います。<br>
-                ・ 文字数と選択されている文字数、行数とキャレットの行番号を表示しています。<br>
-                ・ コードのプレビュー機能を搭載しています。<br>
-                ・ コードの一時保存/ロードができる「Keep」機能を搭載しています。<br>
-                ・ 既存のファイルを読み込んだり、コードをHTMLファイルとして書き出すことができます。<br>
-                ・ エディタの文字サイズやカラーテーマを変更可能です。<br>
-                ・ OSごとにショートカットキーが最適化されます。<br>
-                ・ VueやReact、BootstrapやTailwindCSSなどを使用していないため、軽快に動作します。<br>
+                ・念の為、ライブラリやフレームワークを一切使用していません。<br>
+                ・Web上で動作するので、どこでも使用可能です。<br>
+                ・流行りのテキストエディタのような機能(ショートカットキー)を搭載しています。<br>
+                ・ツールエリアに、いくつかの機能を搭載しています。<br>
+                　> 指定文字の置換(全て / 一つずつ)(大文字小文字の区別なし切替・正規表現切替が可能)<br>
+                　> 計算機(一般数学的な計算式に対応)<br>
+                　> カラーピッカー(カラーパレット機能・カラーコード機能搭載)<br>
+                ・シンプルで分かりやすいレイアウトになっていると思います。<br>
+                ・文字数と選択されている文字数、行数とキャレットの行番号を表示しています。<br>
+                ・コードのプレビュー機能を搭載しています。<br>
+                ・コードの一時保存/ロードができる「Keep」機能を搭載しています。<br>
+                ・既存のファイルを読み込んだり、コードをHTMLファイルとして書き出すことができます。<br>
+                ・エディタの文字サイズやカラーテーマを変更可能です。<br>
+                ・OSごとにショートカットキーなどが最適化されます。<br>
+                　※PC以外の機種には現状対応しておりません。<br>
                 <br>
                 <span class="H">制作者</span><br>
                 <span style="font-size: 30px;vertical-align: middle;"><img src="Logo.png" style="width: 2.8%;vertical-align: middle;">&nbsp;りやんす</span> <a href="https://twitter.com/riyansu255" class="mainLink" target="_blank">Twitter</a> <a href="https://youtube.com/@riyansu255" class="mainLink" target="_blank">YouTube</a><br>
@@ -67,21 +74,59 @@
                 また、Exampleタブでは具体的な使用例(作成したツール)を掲載する予定です。
             </div>
             <div id="page2" style="display:none" class="Main Main-bar">
-                <span class="H">2023/04/14 : Ver.1.0.0公開</span><br>
-                ・Webiterを公開しました。<br><br>
-                <span class="H">2023/04/14 : Ver.1.1.0公開</span><br>
-                ・簡易的なアニメーションを追加しました。<br><br>
-                <span class="H">2023/04/15 : Ver.1.2.0公開</span><br>
-                ・簡易的なレスポンシブデザインを実装しました。<br>
-                ・「NightDark」テーマが反映されない問題を修正しました。<br>
-                ・「NotePad」テーマで境界線がわかりにくい問題を修正しました。<br>
-                ・ツールメニューでスクロールバーが隠れる問題を修正しました。<br>
-                ・ボタンと入力フィールドのずれを修正しました。<br>
-                ・ファイルの読み込み、Keepからの読み込み時、正常に文字数や行数が表示されない問題を修正しました。<br><br>
+                <span class="H">2023/04/16 : Ver.1.4.0公開</span><br>
+                    <span class="fix">
+                        ・ドキュメントの更新履歴の順番を古い順から新しい順に変更しました。<br>
+                        ・ドキュメントの「Help」タブで正しい内容が表示されない問題を修正しました。<br>
+                        ・ドキュメントのバージョンが正常に更新されていない問題を修正しました。<br>
+                        ・ドキュメントの「Introduction」タブの内容を更新しました。<br>
+                        ・「HackerDark」テーマで境界線がわかりにくい問題を修正しました。<br>
+                        ・Replaceの全置換で、Fromに正規表現の記号を入力したとき、<br>
+                        　正規表現として処理される問題(Richtml/textarea内部の問題)を修正しました。<br>
+                        ・Richtml/textareaの中身を一部変更し、Webiterに適用しました。<br>
+                        ・文字を選択していない状態でのCtrl+XまたはCmd+Xを押して一行切り取った時、<br>
+                        　クリップボード履歴に登録されない問題を修正しました。<br>
+                        ・2つのタグの間で改行するとき、間に空の行が挿入される機能で<br>
+                        　終了タグと開始タグの間でも動作してしまう問題を修正しました。<br>
+                        ・<br>
+                    </span>
+                    <span class="new">
+                        ・Emmet記法に対応し、Tabキーで使用できるようになりました。<br>
+                        　いくつかオリジナルの仕様が入っています。<br>
+                        ・Replaceで、アルファベットの大文字と小文字の区別の有無を切り替えられるようにしました。<br>
+                        ・Replaceで、正規表現の使用を切り替えられるようにしました。<br>
+                        ・Webiterのドキュメントボタンのロゴを分かりやすくしました。<br>
+                        　それに伴い、一部ライトテーマの色を変更しました。<br>
+                        ・新しくいくつかの機能とそのショートカットキーを追加しました。<br>
+                        　(アルファベットの大文字小文字切替、一行削除、一行選択など)<br>
+                        ・クリップボード履歴の開閉を、Macの場合はCmd+Opt+Vのショートカットに変更しました。<br>
+                    </span>
+                    <br>
                 <span class="H">2023/04/16 : Ver.1.3.0公開</span><br>
-                ・このドキュメントを作成、Webiterから開けるようにしました。<br>
-                ・内部のファイル管理を最適化しました。<br>
-                ・デザインを見やすく一新し、メニューバーの制作者表示を廃止しました。<br><br>
+                    <span class="new">
+                        ・このドキュメントを作成、Webiterから開けるようにしました。<br>
+                        ・内部のファイル管理を最適化しました。<br>
+                        ・デザインを見やすく一新し、メニューバーの制作者表示を廃止しました。<br>
+                    </span>
+                    <br>
+                <span class="H">2023/04/15 : Ver.1.2.0公開</span><br>
+                    <span class="fix">
+                        ・「NightDark」テーマが反映されない問題を修正しました。<br>
+                    ・「NotePad」テーマで境界線がわかりにくい問題を修正しました。<br>
+                    ・ツールメニューでスクロールバーが隠れる問題を修正しました。<br>
+                    ・ボタンと入力フィールドのずれを修正しました。<br>
+                    ・ファイルの読み込み、Keepからの読み込み時、正常に文字数や行数が表示されない問題を修正しました。<br>
+                    </span>
+                    <span class="new">
+                        ・簡易的なレスポンシブデザインを実装しました。<br>
+                    </span>
+                    <br>
+                <span class="H">2023/04/14 : Ver.1.1.0公開</span><br>
+                    <span class="new">・簡易的なアニメーションを追加しました。<br></span>
+                    <br>
+                <span class="H">2023/04/14 : Ver.1.0.0公開</span><br>
+                <span class="new">・Webiterを公開しました。<br></span>
+                    <br>
             </div>
         </div>
     </body>

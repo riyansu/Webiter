@@ -71,14 +71,9 @@ input.TS-errorCodeInput::placeholder{
     font-size: 25px;
 }
 
-span.codeSample{
-    display: block;
-    width: 50%;
-    height: 8%;
-    background-color: rgb(3, 0, 55);
-    color:white;
-    text-align: center;
-    padding-top: 2%;
-    font-family: monospace;
-    user-select:text;
+span.fix{
+    color:#edf6ff
+}
+span.new{
+    color:#fffef4
 }
