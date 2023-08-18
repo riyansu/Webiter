@@ -14,27 +14,28 @@
     <body oncontextmenu="event.preventDefault()">
         <div class="MENUBAR">
             &nbsp;<span style="vertical-align: bottom;">Webiter</span>&nbsp;
-            <span style="font-size:1.8vw;vertical-align: bottom;">Ver.1.4.2　</span>&nbsp;
+            <span style="font-size:1.8vw;vertical-align: bottom;">Ver.1.4.3&emsp;</span>&nbsp;
             <!-- <span style="font-size:1.4vw">by Riyansu </span> -->
             <!-- <img src="Logo.png" style="height:60%;vertical-align:middle">&nbsp; -->
             <button type="button" class="docsBtn" onclick="window.open('Document/index.html')">
                 <img src="DocsBtn.png" style="height: 100%;vertical-align: middle;" alt="DOCS" aria-label="Document">
             </button>&nbsp;&nbsp;
             <span style="display: inline-block;width: 2%;"> </span>
-            <label for="fontSizeSlider"><input type="range" min="16" max="80" value="28" step="4" class="fontSizeSlider" oninput="document.getElementById('MainEditor').style.fontSize=this.value;SB_ToolsMenu()" id="fontSizeSlider"></label>
-            <label for="themeSelect">
-                <select class="themeSelect" onchange="themeChange(this.value)">
-                    <option class="themeOption" value="0">WindDark</option>
-                    <option class="themeOption" value="1">HackerDark</option>
-                    <option class="themeOption" value="2">NotepadLight</option>
-                    <option class="themeOption" value="3">PopLight</option>
-                    <option class="themeOption" value="4">FancyLight</option>
-                    <option class="themeOption" value="5">NightDark</option>
-                </select>
-            </label>
+            <label for="fontSizeSlider"></label>
+            <input type="range" min="16" max="80" value="28" step="4" class="fontSizeSlider" oninput="document.getElementById('MainEditor').style.fontSize=this.value;SB_ToolsMenu()" id="fontSizeSlider">
+            <label for="themeSelect"></label>
+            <select class="themeSelect" onchange="themeChange(this.value)">
+                <option class="themeOption" value="0">WindDark</option>
+                <option class="themeOption" value="1">HackerDark</option>
+                <option class="themeOption" value="2">NotepadLight</option>
+                <option class="themeOption" value="3">PopLight</option>
+                <option class="themeOption" value="4">FancyLight</option>
+                <option class="themeOption" value="5">NightDark</option>
+            </select>
             <button class="ToolsBtn" onclick="ToolsMenu()" tabindex="-1">TOOLS</button>
         </div>
-        <label for="MainEditor"><textarea class="MainEditor" id="MainEditor" wrap="off" spellcheck="false" oninput="MainInput()" onclick="MainClick()" maxlength="300000" onfocus="MainFocus = true" onblur="MainFocus = false"></textarea></label>
+        <label for="MainEditor"></label>
+        <textarea class="MainEditor" id="MainEditor" wrap="off" spellcheck="false" oninput="MainInput()" onclick="MainClick()" maxlength="300000" onfocus="MainFocus = true" onblur="MainFocus = false"></textarea>
         <span class="toolsMenu" id="toolsMenu">
             <span class="toolsH">REPLACE</span><br>
             <input type="text" placeholder="From" class="toolsInput" onchange="ReplaceFrom=this.value"><br>
