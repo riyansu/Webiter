@@ -21,9 +21,7 @@
                 <img src="DocsBtn.png" style="height: 100%;vertical-align: middle;" alt="DOCS" aria-label="Document">
             </button>&nbsp;&nbsp;
             <span style="display: inline-block;width: 2%;"> </span>
-            <label for="fontSizeSlider"></label>
             <input type="range" min="16" max="80" value="28" step="4" class="fontSizeSlider" oninput="document.getElementById('MainEditor').style.fontSize=this.value;SB_ToolsMenu()" id="fontSizeSlider">
-            <label for="themeSelect"></label>
             <select class="themeSelect" onchange="themeChange(this.value)">
                 <option class="themeOption" value="0">WindDark</option>
                 <option class="themeOption" value="1">HackerDark</option>
@@ -34,7 +32,6 @@
             </select>
             <button class="ToolsBtn" onclick="ToolsMenu()" tabindex="-1">TOOLS</button>
         </div>
-        <label for="MainEditor"></label>
         <textarea class="MainEditor" id="MainEditor" wrap="off" spellcheck="false" oninput="MainInput()" onclick="MainClick()" maxlength="300000" onfocus="MainFocus = true" onblur="MainFocus = false"></textarea>
         <span class="toolsMenu" id="toolsMenu">
             <span class="toolsH">REPLACE</span><br>
